@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DreamLab — Página pessoal do Dryn. Skate, basquete, anime e código. Um pedaço da internet que é meu.">
+  <meta name="author" content="Dryn — DrynWorks">
+  <title>DreamLab — Dryn's Desktop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Desktop background -->
+  <div class="desktop-bg"></div>
+
+  <!-- Desktop Icons (right side) -->
+  <div class="desktop-icons">
+    <a href="sobre.html" class="desktop-icon" id="icon-sobre">
+      <span class="desktop-icon-img">📁</span>
+      <span class="desktop-icon-label">sobre.txt</span>
+    </a>
+    <a href="irma.html" class="desktop-icon" id="icon-irma">
+      <span class="desktop-icon-img">💜</span>
+      <span class="desktop-icon-label">irmã.html</span>
+    </a>
+    <a href="https://github.com/DrynWorks" target="_blank" rel="noopener" class="desktop-icon" id="icon-github">
+      <span class="desktop-icon-img">💻</span>
+      <span class="desktop-icon-label">GitHub</span>
+    </a>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+
+      <!-- Profile Card -->
+      <div class="window profile-card" id="profile-card" style="animation-delay: 0.05s;">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="window-title">profile.exe</span>
+        </div>
+        <div class="window-body">
+          <div class="profile-avatar">🛹</div>
+          <div class="profile-name">Dryn</div>
+          <div class="profile-status-label">status:</div>
+          <div class="profile-status">
+            <span class="status-dot"></span>
+            online
+          </div>
+          <div class="construction-tag">
+            <span class="blink">⚡</span>
+            em construção
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="window" id="nav-window" style="animation-delay: 0.1s;">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="window-title">navegação</span>
+        </div>
+        <div class="window-body" style="padding: 8px;">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-item active"><span class="nav-icon">🏠</span> início</a></li>
+            <li><a href="sobre.html" class="nav-item"><span class="nav-icon">📝</span> sobre mim</a></li>
+            <li><a href="irma.html" class="nav-item"><span class="nav-icon">💜</span> minha irmã</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Now Playing -->
+      <div class="window now-playing" id="now-playing" style="animation-delay: 0.15s;">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="window-title">now playing</span>
+        </div>
+        <div class="window-body">
+          <div class="now-playing-label">
+            <span class="note">♪</span> ouvindo agora
+          </div>
+          <div class="song-name">In The End</div>
+          <div class="song-artist">Linkin Park</div>
+          <div class="eq-bars">
+            <span class="eq-bar" style="--h: 12px; --speed: 0.4s;"></span>
+            <span class="eq-bar" style="--h: 16px; --speed: 0.55s;"></span>
+            <span class="eq-bar" style="--h: 8px; --speed: 0.35s;"></span>
+            <span class="eq-bar" style="--h: 14px; --speed: 0.6s;"></span>
+            <span class="eq-bar" style="--h: 10px; --speed: 0.45s;"></span>
+            <span class="eq-bar" style="--h: 16px; --speed: 0.5s;"></span>
+            <span class="eq-bar" style="--h: 6px; --speed: 0.3s;"></span>
+            <span class="eq-bar" style="--h: 12px; --speed: 0.65s;"></span>
+          </div>
+
+          <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);">
+            <div class="now-playing-label">
+              <span class="note">♫</span> recentes
+            </div>
+            <div style="font-family: var(--font-pixel); font-size: 14px; color: var(--text-dim); line-height: 1.8;">
+              Numb — Linkin Park<br>
+              Somewhere I Belong — Linkin Park<br>
+              Dani California — RHCP<br>
+              Basket Case — Green Day
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visitor Counter -->
+      <div class="window" id="visitor-window" style="animation-delay: 0.2s;">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="window-title">visitantes</span>
+        </div>
+        <div class="window-body" style="text-align: center;">
+          <div class="visitor-counter" style="justify-content: center;">
+            <span>nº</span>
+            <div class="counter-digits">
+              <span class="digit">0</span>
+              <span class="digit">0</span>
+              <span class="digit">4</span>
+              <span class="digit">2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /sidebar -->
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+
+      <!-- Header Banner -->
+      <div class="window header-banner" id="header-banner">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="window-title">dreamlab.exe</span>
+        </div>
+        <div class="window-body">
+          <div class="banner-content">
+            <div class="banner-title">DreamLab</div>
+            <div class="banner-sub">by DrynWorks — um pedaço da internet que é meu</div>
+          </div>
+          <div class="marquee-bar">
+            <div class="marquee-content">
+              <span class="sep">★</span>
+              bem-vindo ao dreamlab — território dryn
+              <span class="sep">★</span>
+              sábado à tarde, skate na rua, sol entrando pela janela
+              <span class="sep">★</span>
+              in the end it doesn't even matter
+              <span class="sep">★</span>
+              sites pessoais > redes sociais
+              <span class="sep">★</span>
+              bem-vindo ao dreamlab — território dryn
+              <span class="sep">★</span>
+              sábado à tarde, skate na rua, sol entrando pela janela
+              <span class="sep">★</span>
+              in the end it doesn't even matter
+              <span class="sep">★</span>
+              sites pessoais > redes sociais
+              <span class="sep">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Widgets Row -->
+      <div class="widgets-row">
+
+        <!-- Welcome -->
+        <div class="window welcome-widget" id="welcome-widget">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <span class="window-title">bem-vindo.txt</span>
+          </div>
+          <div class="window-body">
+            <div class="welcome-text">
+              <span class="hi">Eae!</span> 👋<br><br>
+              Eu sou o <span class="name-hl">Dryn</span>, tenho 22 anos e esse aqui é meu cantinho na internet.<br><br>
+              Aqui não tem algoritmo, não tem timeline, não tem like. É só eu, meu código e minhas paradas.<br><br>
+              Fica à vontade pra explorar<span class="typing-cursor"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status -->
+        <div class="window status-widget" id="status-widget">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <span class="window-title">status.log</span>
+          </div>
+          <div class="window-body">
+            <div class="status-grid">
+              <div class="status-row">
+                <span class="status-label">☀️ humor:</span>
+                <span class="status-value mood">de boa</span>
+              </div>
+              <div class="status-row">
+                <span class="status-label">🎯 fazendo:</span>
+                <span class="status-value doing">codando</span>
+              </div>
+              <div class="status-row">
+                <span class="status-label">🎧 ouvindo:</span>
+                <span class="status-value listening">Linkin Park</span>
+              </div>
+              <div class="status-row">
+                <span class="status-label">🎮 jogando:</span>
+                <span class="status-value playing">nada agora</span>
+              </div>
+              <div class="status-row">
+                <span class="status-label">📺 assistindo:</span>
+                <span class="status-value" style="color: var(--pink);">Naruto</span>
+              </div>
+              <div class="status-row">
+                <span class="status-label">📍 local:</span>
+                <span class="status-value">quarto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /widgets-row -->
+
+      <!-- Links & Vibes Row -->
+      <div class="widgets-row">
+
+        <!-- Links Favoritos -->
+        <div class="window links-widget" id="links-widget">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <span class="window-title">favoritos/</span>
+          </div>
+          <div class="window-body" style="padding: 8px 10px;">
+            <div class="links-grid">
+              <a href="https://howsoonisnow.org/" target="_blank" rel="noopener" class="link-entry" id="link-hsin">
+                <span class="link-entry-icon">🌙</span>
+                <div class="link-entry-info">
+                  <div class="link-entry-name">How Soon Is Now?</div>
+                  <div class="link-entry-desc">site pessoal muito legal que achei</div>
+                </div>
+                <span class="link-entry-arrow">→</span>
+              </a>
+              <a href="https://mydora.restorativland.org/" target="_blank" rel="noopener" class="link-entry" id="link-mydora">
+                <span class="link-entry-icon">🎵</span>
+                <div class="link-entry-info">
+                  <div class="link-entry-name">MyDora</div>
+                  <div class="link-entry-desc">toca músicas legais</div>
+                </div>
+                <span class="link-entry-arrow">→</span>
+              </a>
+              <a href="https://github.com/DrynWorks" target="_blank" rel="noopener" class="link-entry" id="link-github">
+                <span class="link-entry-icon">💻</span>
+                <div class="link-entry-info">
+                  <div class="link-entry-name">GitHub — DrynWorks</div>
+                  <div class="link-entry-desc">meus projetos e código</div>
+                </div>
+                <span class="link-entry-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vibes -->
+        <div class="window vibes-widget" id="vibes-widget">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <span class="window-title">vibes.cfg</span>
+          </div>
+          <div class="window-body">
+            <div class="vibes-tags">
+              <span class="vibe-tag skate">🛹 skate</span>
+              <span class="vibe-tag basketball">🏀 basquete</span>
+              <span class="vibe-tag anime">🎌 anime</span>
+              <span class="vibe-tag tech">⌨️ código</span>
+              <span class="vibe-tag music">🎸 rock</span>
+              <span class="vibe-tag" style="color: var(--green); border-color: var(--green-soft);">☕ café</span>
+              <span class="vibe-tag" style="color: var(--blue-soft); border-color: #4a6a8a;">🌧️ chuva</span>
+              <span class="vibe-tag" style="color: var(--yellow); border-color: #a09840;">📼 nostalgia</span>
+              <span class="vibe-tag" style="color: var(--pink); border-color: #a06878;">🎮 games</span>
+              <span class="vibe-tag" style="color: var(--accent); border-color: var(--accent-soft);">🌅 tarde de sábado</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /widgets-row -->
+
+      <!-- Footer -->
+      <footer class="site-footer" id="footer" style="margin-left: 0;">
+        <div class="footer-text">© DrynWorks 2025 — feito com HTML puro e muito café ☕</div>
+        <div class="footer-badges">
+          <span class="footer-badge">HTML</span>
+          <span class="footer-badge">CSS</span>
+          <span class="footer-badge">vanilla</span>
+          <span class="footer-badge">♡ feito à mão</span>
+        </div>
+      </footer>
+
+    </div><!-- /main-content -->
+
+  </div><!-- /page-wrapper -->
+
+  <!-- TASKBAR -->
+  <div class="taskbar" id="taskbar">
+    <button class="taskbar-start" id="taskbar-start">⚡ Dryn</button>
+    <div class="taskbar-separator"></div>
+    <div class="taskbar-items">
+      <a href="index.html" class="taskbar-item active">🏠 início</a>
+      <a href="sobre.html" class="taskbar-item">📝 sobre</a>
+      <a href="irma.html" class="taskbar-item">💜 irmã</a>
+    </div>
+    <div class="taskbar-clock" id="taskbar-clock"></div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Taskbar clock
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('taskbar-clock').textContent = h + ':' + m;
+    }
+    updateClock();
+    setInterval(updateClock, 30000);
+  </script>
+
+</body>
+</html>
