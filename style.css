@@ -383,55 +383,62 @@ a:hover {
   text-align: center;
 }
 
-/* ===== NOW PLAYING (Sidebar) ===== */
-.now-playing .window-body {
-  padding: 10px 12px;
+/* ===== MUSIC PLAYER (Sidebar) ===== */
+.music-player .window-body.music-player-body {
+  padding: 6px;
+  background: #0d0d0d;
 }
 
-.now-playing-label {
-  font-family: var(--font-pixel);
-  font-size: 13px;
-  color: var(--text-dim);
-  margin-bottom: 6px;
+.music-player .window-body.music-player-body iframe {
+  border-radius: 4px;
+  display: block;
+}
+
+/* ===== ANIME FAVORITES WIDGET ===== */
+.anime-widget {
+  animation-delay: 0.3s;
+}
+
+.anime-list {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.now-playing-label .note {
-  animation: float 2s ease-in-out infinite;
-}
-
-.song-name {
+.anime-entry {
   font-family: var(--font-pixel);
   font-size: 17px;
-  color: var(--pink);
-  margin-bottom: 2px;
-}
-
-.song-artist {
-  font-size: 12px;
-  color: var(--text-dim);
-}
-
-.eq-bars {
+  color: var(--text);
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: all 0.15s;
   display: flex;
-  gap: 2px;
-  margin-top: 8px;
-  height: 16px;
-  align-items: flex-end;
+  align-items: center;
+  gap: 8px;
 }
 
-.eq-bar {
-  width: 3px;
-  background: var(--accent);
-  border-radius: 1px;
-  animation: eq-bounce var(--speed, 0.5s) ease-in-out infinite alternate;
+.anime-entry:hover {
+  background: rgba(212, 138, 160, 0.08);
+  color: var(--pink);
 }
 
-@keyframes eq-bounce {
-  from { height: 3px; }
-  to { height: var(--h, 14px); }
+.anime-bullet {
+  color: var(--pink);
+  font-size: 14px;
+}
+
+/* ===== PLAYLIST LINK IN STATUS ===== */
+.status-value.listening a {
+  color: var(--pink);
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.status-value.listening a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ===== MAIN CONTENT AREA ===== */
