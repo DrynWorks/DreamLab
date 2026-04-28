@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Barra de progresso de carregamento -->
+  <div id="loading-bar"></div>
+
   <!-- Desktop background -->
   <div class="desktop-bg"></div>
 
@@ -22,6 +25,10 @@
     <a href="irma.html" class="desktop-icon" id="icon-irma">
       <span class="desktop-icon-img">💜</span>
       <span class="desktop-icon-label">irmã.html</span>
+    </a>
+    <a href="diario.html" class="desktop-icon" id="icon-diario">
+      <span class="desktop-icon-img">📓</span>
+      <span class="desktop-icon-label">diário</span>
     </a>
     <a href="https://github.com/DrynWorks" target="_blank" rel="noopener" class="desktop-icon" id="icon-github">
       <span class="desktop-icon-img">💻</span>
@@ -74,6 +81,7 @@
             <li><a href="index.html" class="nav-item active"><span class="nav-icon">🏠</span> início</a></li>
             <li><a href="sobre.html" class="nav-item"><span class="nav-icon">📝</span> sobre mim</a></li>
             <li><a href="irma.html" class="nav-item"><span class="nav-icon">💜</span> minha irmã</a></li>
+            <li><a href="diario.html" class="nav-item"><span class="nav-icon">📓</span> diário</a></li>
           </ul>
         </div>
       </div>
@@ -133,7 +141,7 @@
         </div>
         <div class="window-body">
           <div class="banner-content">
-            <div class="banner-title">DreamLab</div>
+            <div class="banner-title" id="banner-title">DreamLab</div>
             <div class="banner-sub">by DrynWorks — um pedaço da internet que é meu</div>
           </div>
           <div class="marquee-bar">
@@ -323,6 +331,7 @@
       <!-- Footer -->
       <footer class="site-footer" id="footer" style="margin-left: 0;">
         <div class="footer-text">© DrynWorks 2025 — feito com HTML puro e muito café ☕</div>
+        <div class="footer-online">· online desde 2026 ·</div>
         <div class="footer-badges">
           <span class="footer-badge">HTML</span>
           <span class="footer-badge">CSS</span>
@@ -343,6 +352,7 @@
       <a href="index.html" class="taskbar-item active">🏠 início</a>
       <a href="sobre.html" class="taskbar-item">📝 sobre</a>
       <a href="irma.html" class="taskbar-item">💜 irmã</a>
+      <a href="diario.html" class="taskbar-item">📓 diário</a>
     </div>
     <div class="taskbar-clock" id="taskbar-clock"></div>
   </div>
@@ -358,6 +368,38 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
+
+    // Favicon gerado via canvas — D verde sobre fundo escuro
+    (function() {
+      const c = document.createElement('canvas');
+      c.width = 32; c.height = 32;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#1a1d2e';
+      ctx.fillRect(0, 0, 32, 32);
+      ctx.fillStyle = '#7ab87a';
+      ctx.font = 'bold 22px monospace';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('D', 16, 17);
+      const lnk = document.createElement('link');
+      lnk.rel = 'icon';
+      lnk.href = c.toDataURL();
+      document.head.appendChild(lnk);
+    })();
+
+    // Glitch sutil no título DREAMLAB — troca uma letra por 100ms a cada 8s
+    (function() {
+      const el = document.getElementById('banner-title');
+      if (!el) return;
+      const original = el.textContent;
+      const glitchChars = ['░', '▒', '▓', '■', '◆', '⊕', 'Ж', 'Ω', '∆', '≡', '⌂', 'Ð', '⊗'];
+      setInterval(function() {
+        const idx = Math.floor(Math.random() * original.length);
+        const ch = glitchChars[Math.floor(Math.random() * glitchChars.length)];
+        el.textContent = original.substring(0, idx) + ch + original.substring(idx + 1);
+        setTimeout(function() { el.textContent = original; }, 100);
+      }, 8000);
+    })();
   </script>
 
 </body>
