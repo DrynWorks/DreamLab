@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <div id="loading-bar"></div>
   <div class="desktop-bg"></div>
 
   <!-- Desktop Icons -->
@@ -44,6 +45,7 @@
             <span class="status-dot"></span>
             online
           </div>
+          <div class="construction-tag">[ em construção ]</div>
         </div>
       </div>
 
@@ -61,12 +63,22 @@
         </div>
       </div>
 
-      <div class="window music-player" style="animation-delay: 0.15s;">
-        <div class="window-header">
-          <span class="window-title">♪ player</span>
+      <!-- Win98 CD Player -->
+      <div class="window music-player" id="music-player" style="animation-delay: 0.15s;">
+        <div class="win98-titlebar">
+          <div class="win98-titlebar-text">
+            <img src="https://files.catbox.moe/tg55zp.png" alt="cd"> CD player
+          </div>
+          <div class="win98-titlebar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
         </div>
-        <div class="window-body music-player-body">
-          <iframe width="100%" height="152" src="https://www.youtube.com/embed/videoseries?list=PLjc7AFgJy25b03aCRT9rmCzUTGHx1Hnlt" frameborder="0" allowfullscreen style="border-radius: 4px; display: block;"></iframe>
+        <div class="win98-iframe-body">
+          <iframe width="100%" height="152"
+            src="https://www.youtube.com/embed/videoseries?list=PLjc7AFgJy25b03aCRT9rmCzUTGHx1Hnlt"
+            frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -85,23 +97,39 @@
         </div>
       </div>
 
-      <!-- Diary Entries -->
+      <!-- Diary Entries — mais recente primeiro -->
       <div class="diary-container">
 
-        <!-- Entry 1 — Today -->
+        <!-- Entrada: 29 de abril, 2026 -->
         <div class="diary-stack" style="animation-delay: 0.1s;">
           <div class="diary-entry">
             <div class="diary-fold"></div>
             <div class="diary-entry-holes">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div class="diary-date">
-              28 de abril, 2026 — terça-feira
+            <div class="diary-date">29 de abril, 2026 — quarta-feira</div>
+            <div class="diary-text">
+              <p>hoje continuo meio confuso com a minha carreira. parece que eu terminei uma fase da vida, mas ainda não consegui entrar direito na próxima. fico pensando em trabalho, programação, futuro, dinheiro, vontade de criar coisas e, ao mesmo tempo, aquela sensação estranha de não saber exatamente pra onde ir.</p>
+              <p>a internet também é muito doida. tem coisa demais, caminho demais, gente demais fazendo coisa bonita demais. às vezes parece que tudo já existe e que eu estou atrasado, mas ao mesmo tempo eu sei que esse site aqui é meu jeito de tentar existir nesse meio. sem algoritmo, sem timeline, sem precisar parecer perfeito.</p>
+              <p>também estou confuso com esses sites feitos em HTML, CSS e JS. mesmo com as IAs ajudando, ainda é difícil deixar tudo legal de verdade. uma coisa é fazer funcionar, outra coisa é fazer ficar bonito, organizado, com personalidade e sem quebrar nada. cada ajuste pequeno vira um monte de detalhe.</p>
+              <p>percebi também que, quando eu for adicionar imagens, provavelmente vou ter que deixar elas direto nas pastas do projeto, no lugar certo, pra elas aparecerem quando eu hospedar o código. parece simples, mas na prática tudo exige atenção: nome do arquivo, caminho, pasta, link, hospedagem, organização.</p>
+              <p>ainda assim, mesmo sendo difícil codar tudo, tem algo legal nisso. é como montar um quarto dentro da internet, colocando uma coisa de cada vez. talvez demore, talvez fique estranho por um tempo, mas pelo menos é meu.</p>
+              <p>ainda estou sem trabalho e, por enquanto, também não consegui adicionar um jeito bonitinho para visitantes entrarem em contato pelo site. então, se alguém passar por aqui e quiser mandar uma mensagem, pode me chamar pelo e-mail: <a href="mailto:adryan.alves.ribeiro@gmail.com">adryan.alves.ribeiro@gmail.com</a></p>
+              <p>talvez esse site ainda esteja em construção, mas eu também estou.</p>
             </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Entrada: 28 de abril, 2026 -->
+        <div class="diary-stack" style="animation-delay: 0.18s;">
+          <div class="diary-entry">
+            <div class="diary-fold"></div>
+            <div class="diary-entry-holes">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="diary-date">28 de abril, 2026 — terça-feira</div>
             <div class="diary-text">
               <p>hoje me sinto um pouco confuso e com medo. acho que esse site vai virar um diário também — espero que ajude alguém um dia.</p>
               <p>queria estar na cidade com os amigos jogando basquete, ou ter um skate pra andar. não tenho grana pra comprar um agora. basquete até dá pra jogar, talvez mais tarde no fim da tarde.</p>
@@ -111,16 +139,16 @@
 
         <hr>
 
-        <!-- Future entries space -->
-        <div class="diary-empty" style="animation-delay: 0.2s;">
+        <!-- Espaço para futuras entradas -->
+        <div class="diary-empty" style="animation-delay: 0.25s;">
           <div class="diary-empty-icon">&gt;</div>
           <div class="diary-empty-text">próximas páginas em branco... esperando novas histórias</div>
         </div>
 
-      </div>
+      </div><!-- /diary-container -->
 
       <footer class="site-footer" style="margin-left: 0;">
-        <div class="footer-text">© DrynWorks 2025 — feito com HTML puro e muito café ·</div>
+        <div class="footer-text">© DrynWorks 2026 — feito com HTML puro e muito café ·</div>
         <div class="footer-online">· feito à mão com html puro · drynworks 2026 ·</div>
         <div class="footer-badges">
           <span class="footer-badge">HTML</span>

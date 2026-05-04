@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <div id="loading-bar"></div>
   <div class="desktop-bg"></div>
 
   <!-- Desktop Icons -->
@@ -44,6 +45,7 @@
             <span class="status-dot"></span>
             online
           </div>
+          <div class="construction-tag">[ em construção ]</div>
         </div>
       </div>
 
@@ -61,6 +63,7 @@
         </div>
       </div>
 
+      <!-- Now Playing -->
       <div class="window now-playing" style="animation-delay: 0.15s;">
         <div class="window-header">
           <span class="window-title">now playing</span>
@@ -112,6 +115,7 @@
               sem likes. Tipo o quarto de quando era adolescente, mas em forma de site.
             </p>
 
+            <!-- Interesses -->
             <div class="about-interests">
               <h3>* Interesses</h3>
               <div class="vibes-tags" style="margin-top: 8px;">
@@ -124,12 +128,90 @@
                 <span class="vibe-tag" style="color: var(--yellow); border-color: #a09840;">* nostalgia 2000s</span>
               </div>
             </div>
+
+            <!-- Coisas que gosto -->
+            <div class="sobre-block">
+              <div class="sobre-block-title">* coisas que gosto</div>
+              <ul class="sobre-list">
+                <li>skate — quando eu tiver um de novo</li>
+                <li>basquete na quadra da rua</li>
+                <li>Linkin Park no repeat infinito</li>
+                <li>Naruto e qualquer anime que prende</li>
+                <li>sites pessoais feitos à mão na internet</li>
+                <li>tarde de sábado sem compromisso</li>
+                <li>café com chuva do lado de fora</li>
+                <li>debugar um código e finalmente funcionar</li>
+              </ul>
+            </div>
+
+            <!-- Aprendendo agora -->
+            <div class="sobre-block">
+              <div class="sobre-block-title">&gt; aprendendo agora</div>
+              <ul class="sobre-list">
+                <li>HTML semântico e boas práticas</li>
+                <li>CSS grid e flexbox mais avançado</li>
+                <li>JavaScript vanilla, sem frameworks</li>
+                <li>Git e GitHub na prática do dia a dia</li>
+                <li>como hospedar um site estático de graça</li>
+                <li>como deixar código organizado e legível</li>
+              </ul>
+            </div>
+
+            <!-- Tecnologias -->
+            <div class="sobre-block">
+              <div class="sobre-block-title">~ tecnologias explorando</div>
+              <div class="tech-tags">
+                <span class="tech-tag exploring">HTML5</span>
+                <span class="tech-tag exploring">CSS3</span>
+                <span class="tech-tag exploring">JS vanilla</span>
+                <span class="tech-tag learning">Git</span>
+                <span class="tech-tag learning">GitHub Pages</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">Neocities</span>
+                <span class="tech-tag">Antigravity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estado Atual -->
+      <div class="window" id="estado-window" style="animation-delay: 0.2s;">
+        <div class="window-header">
+          <span class="window-title">estado_atual.log</span>
+        </div>
+        <div class="window-body">
+          <div class="status-grid">
+            <div class="status-row">
+              <span class="status-label">* humor:</span>
+              <span class="status-value">em construção permanente</span>
+            </div>
+            <div class="status-row">
+              <span class="status-label">&gt; fazendo:</span>
+              <span class="status-value">aprendendo HTML/CSS/JS</span>
+            </div>
+            <div class="status-row">
+              <span class="status-label">~ buscando:</span>
+              <span class="status-value">emprego na área de tech</span>
+            </div>
+            <div class="status-row">
+              <span class="status-label">* querendo:</span>
+              <span class="status-value">um skate novo</span>
+            </div>
+            <div class="status-row">
+              <span class="status-label">&gt; ouvindo:</span>
+              <span class="status-value">Linkin Park no repeat</span>
+            </div>
+            <div class="status-row">
+              <span class="status-label">~ assistindo:</span>
+              <span class="status-value">Naruto</span>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Fun Facts -->
-      <div class="window" id="facts-window" style="animation-delay: 0.2s;">
+      <div class="window" id="facts-window" style="animation-delay: 0.28s;">
         <div class="window-header">
           <span class="window-title">random_facts.cfg</span>
         </div>
@@ -145,7 +227,7 @@
             </div>
             <div class="status-row">
               <span class="status-label">~ banda fav:</span>
-              <span class="status-value listening">Linkin Park</span>
+              <span class="status-value">Linkin Park</span>
             </div>
             <div class="status-row">
               <span class="status-label">* anime fav:</span>
@@ -159,12 +241,33 @@
               <span class="status-label">&gt; editor:</span>
               <span class="status-value" style="color: var(--blue-soft);">VS Code</span>
             </div>
+            <div class="status-row">
+              <span class="status-label">~ SO:</span>
+              <span class="status-value" style="color: var(--blue-soft);">Windows 10</span>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Contato -->
+      <div class="window contact-card" id="contact-sobre" style="animation-delay: 0.35s;">
+        <div class="window-header">
+          <span class="window-title">contato.log</span>
+        </div>
+        <div class="window-body">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); margin-bottom: 12px;">
+            // quer falar comigo? me manda um e-mail
+          </div>
+          <a href="mailto:adryan.alves.ribeiro@gmail.com" class="contact-email-link">
+            <span style="color: var(--green); flex-shrink:0;">&gt;</span>
+            adryan.alves.ribeiro@gmail.com
+          </a>
+          <a href="mailto:adryan.alves.ribeiro@gmail.com" class="contact-mailto">[&gt;] abrir e-mail</a>
+        </div>
+      </div>
+
       <footer class="site-footer" style="margin-left: 0;">
-        <div class="footer-text">© DrynWorks 2025 — feito com HTML puro e muito café ·</div>
+        <div class="footer-text">© DrynWorks 2026 — feito com HTML puro e muito café ·</div>
         <div class="footer-online">· feito à mão com html puro · drynworks 2026 ·</div>
         <div class="footer-badges">
           <span class="footer-badge">HTML</span>

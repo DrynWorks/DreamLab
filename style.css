@@ -1244,6 +1244,391 @@ a { animation: link-flash 0.7s ease-out 0.5s both; }
   letter-spacing: 1px;
 }
 
+/* ===== VIBES TAGS CONTAINER ===== */
+.vibes-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ===== WIN98 CD PLAYER — estilos compartilhados entre páginas ===== */
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://files.catbox.moe/1za99g.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://files.catbox.moe/z7csle.woff") format("woff");
+  font-weight: bold;
+}
+#music-player {
+  background: #c0c0c0 !important;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+              inset -2px -2px #808080, inset 2px 2px #ffffff !important;
+  padding: 3px !important;
+  border: none !important;
+}
+.win98-titlebar {
+  background: linear-gradient(90deg, purple, orchid, pink);
+  padding: 3px 2px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.win98-titlebar-text {
+  font-weight: bold;
+  color: white;
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 4px;
+}
+.win98-titlebar-text img { height: 14px; width: 14px; }
+.win98-titlebar-controls { display: flex; }
+.win98-titlebar-controls button {
+  padding: 0 !important;
+  display: block;
+  width: 16px !important;
+  min-width: 16px !important;
+  height: 14px;
+  min-height: 14px !important;
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+              inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  border: none;
+  border-radius: 0;
+}
+.win98-titlebar-controls button:active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+              inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+.win98-titlebar-controls button[aria-label="Minimize"] {
+  background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
+  background-position: bottom 3px left 4px;
+  background-repeat: no-repeat;
+}
+.win98-titlebar-controls button[aria-label="Maximize"] {
+  background-image: url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
+  background-position: top 2px left 3px;
+  background-repeat: no-repeat;
+}
+.win98-titlebar-controls button[aria-label="Close"] {
+  background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
+  background-position: top 3px left 4px;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+}
+.win98-iframe-body { margin: 2px 0 0 0; padding: 0; line-height: 0; }
+.win98-iframe-body iframe { display: block; }
+
+/* ===== NOW PLAYING (sidebar das páginas sobre/irmã) ===== */
+.now-playing .window-body { padding: 12px; }
+.now-playing-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.note { color: var(--accent); animation: pulse-soft 1.5s ease-in-out infinite; }
+.song-name { font-family: var(--font-pixel); font-size: 17px; color: var(--white); margin-bottom: 2px; }
+.song-artist { font-family: var(--font-pixel); font-size: 14px; color: var(--text-dim); margin-bottom: 10px; }
+.eq-bars { display: flex; align-items: flex-end; gap: 3px; height: 22px; }
+.eq-bar {
+  width: 4px;
+  background: var(--accent);
+  border-radius: 1px;
+  animation: eq-bounce var(--speed, 0.5s) ease-in-out infinite alternate;
+  height: var(--h, 10px);
+}
+@keyframes eq-bounce {
+  from { transform: scaleY(0.3); }
+  to   { transform: scaleY(1); }
+}
+
+/* ===== DIARY EXTRAS (stack, fold, holes, empty) ===== */
+.diary-stack { position: relative; animation: fadeInUp 0.5s ease-out both; }
+.diary-fold {
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 32px 32px 0;
+  border-color: transparent #b8ad90 transparent transparent;
+  z-index: 6;
+}
+.diary-entry-holes {
+  position: absolute;
+  left: 22px; top: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  pointer-events: none;
+  z-index: 5;
+  padding: 20px 0;
+}
+.diary-entry-holes span {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #e0d8cc;
+  border: 2px solid #b8ad90;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+}
+.diary-empty {
+  text-align: center;
+  padding: 28px 20px;
+  font-family: var(--font-hand);
+  color: var(--text-dim);
+  opacity: 0.5;
+  animation: fadeInUp 0.5s ease-out both;
+}
+.diary-empty-icon { font-family: var(--font-pixel); font-size: 22px; margin-bottom: 8px; color: var(--border); }
+.diary-empty-text { font-size: 16px; }
+
+/* ===== CONTACT CARD ===== */
+.contact-card { border-left: 3px solid var(--green) !important; }
+.contact-card .window-title { color: var(--green) !important; }
+.contact-email-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  margin: 10px 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  word-break: break-all;
+  transition: all 0.2s;
+}
+.contact-email-link:hover {
+  border-color: var(--accent);
+  background: rgba(126, 184, 212, 0.08);
+  color: var(--white);
+  text-decoration: none;
+}
+.contact-note { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+.contact-mailto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 6px 18px;
+  background: rgba(122, 184, 122, 0.08);
+  border: 1px solid var(--green-soft);
+  border-radius: 3px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.contact-mailto:hover {
+  background: rgba(122, 184, 122, 0.18);
+  border-color: var(--green);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ===== SOBRE PAGE — blocos extras ===== */
+.sobre-block { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+.sobre-block-title { font-family: var(--font-pixel); font-size: 17px; color: var(--accent); margin-bottom: 10px; }
+.sobre-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.sobre-list li {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  gap: 6px;
+}
+.sobre-list li::before { content: "> "; color: var(--accent-soft); flex-shrink: 0; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-dim);
+  background: rgba(0,0,0,0.2);
+  transition: all 0.15s;
+}
+.tech-tag:hover { border-color: var(--accent-soft); color: var(--accent); }
+.tech-tag.learning  { border-color: var(--green-soft); color: var(--green); background: rgba(122,184,122,0.06); }
+.tech-tag.exploring { border-color: var(--accent-soft); color: var(--accent-soft); background: rgba(126,184,212,0.06); }
+
+/* estado_atual.log — mesma suavidade do random_facts.cfg */
+#estado-window .status-label        { color: var(--text-dim); }
+#estado-window .status-value        { color: var(--text); text-shadow: none; }
+#estado-window .status-row::before  { content: '>'; color: var(--accent-soft); opacity: 0.5; font-weight: normal; }
+
+/* ===== SISTER PAGE — extras afetivos ===== */
+.sister-carta {
+  margin: 16px 0;
+  padding: 16px 20px;
+  background: rgba(255, 179, 198, 0.04);
+  border: 1px dashed rgba(255, 179, 198, 0.35);
+  border-radius: 4px;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: #ffccd8;
+  line-height: 1.7;
+}
+.sister-stars {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #ff90b0;
+  letter-spacing: 6px;
+  text-align: center;
+  padding: 6px 0;
+  opacity: 0.7;
+}
+.sister-stamp {
+  display: inline-block;
+  border: 2px solid rgba(255, 179, 198, 0.6);
+  padding: 5px 14px;
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: #ffb3c6;
+  transform: rotate(-2deg);
+  margin-top: 12px;
+  box-shadow: 2px 2px 0 rgba(255, 179, 198, 0.15);
+}
+
+/* ===== PROFILE CARD — dark forum card com acento roxo ===== */
+.profile-card {
+  background: linear-gradient(160deg, #1c1830 0%, #131128 100%) !important;
+  border: 1px solid #3a2a5a !important;
+  border-top: 3px solid #7a5ab8 !important;
+  box-shadow: 0 0 24px rgba(100, 60, 180, 0.12) !important;
+}
+.profile-card .window-header {
+  background: linear-gradient(90deg, #241840, #1c1830) !important;
+  border-bottom: 1px solid #3a2a5a !important;
+}
+.profile-card .window-title { color: #9a7ad0 !important; }
+.profile-card .profile-avatar {
+  border-color: #7a5ab8 !important;
+  box-shadow: 0 0 16px rgba(120, 80, 200, 0.28);
+  background: linear-gradient(135deg, #281e48, #181030) !important;
+}
+.profile-card .profile-name { color: #b090e0 !important; }
+.profile-card .status-dot   { background: #5af078 !important; box-shadow: 0 0 6px #5af078; }
+.profile-card .profile-status { color: #5af078 !important; }
+
+/* ===== VISITOR WINDOW (sidebar) — display LED verde ===== */
+#visitor-window {
+  background: #040904 !important;
+  border: 1px solid #0a240a !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 16px rgba(0, 80, 0, 0.25) inset !important;
+}
+#visitor-window .window-header {
+  background: #020602 !important;
+  border-bottom: 1px solid #0a240a !important;
+}
+#visitor-window .window-title {
+  color: #2a8a2a !important;
+  font-family: var(--font-pixel) !important;
+  letter-spacing: 1px;
+}
+#visitor-window .visitor-counter { color: #3a9a3a; }
+#visitor-window .digit {
+  background: #060e06 !important;
+  border-color: #0c380c !important;
+  color: #22ff22 !important;
+  font-size: 22px !important;
+  padding: 4px 8px !important;
+  text-shadow: 0 0 10px rgba(34, 255, 34, 0.7);
+  min-width: 24px !important;
+  letter-spacing: 0;
+}
+
+/* ===== VISITAS WIDGET (main) — painel de log de servidor ===== */
+#visitas-widget {
+  background: #05080e !important;
+  border: 1px solid #14203a !important;
+  border-left: 3px solid #3a68b8 !important;
+  border-radius: 0 !important;
+}
+#visitas-widget .window-header {
+  background: #080e1c !important;
+  border-bottom: 1px solid #14203a !important;
+}
+#visitas-widget .window-title { color: #4a88d4 !important; }
+#visitas-widget .visitas-label { color: #3a68b8 !important; }
+#visitas-widget .visitas-number {
+  color: #5abcff !important;
+  border-color: #14284a !important;
+  text-shadow: 0 0 14px rgba(90, 188, 255, 0.5);
+}
+#visitas-widget .visitas-meta { color: #3a68b8 !important; }
+
+/* ===== AGORA WIDGET — post-it amarelo ===== */
+#agora-widget {
+  position: relative;
+  background: #fef5a4 !important;
+  color: #2a2815 !important;
+  border: 1px solid #d8c43a !important;
+  border-radius: 0 !important;
+  transform: rotate(0.5deg);
+  box-shadow: 4px 5px 16px rgba(0,0,0,0.32) !important;
+}
+#agora-widget .window-header {
+  background: rgba(195, 175, 10, 0.22) !important;
+  border-bottom: 1px dashed #c8b428 !important;
+}
+#agora-widget .window-title {
+  color: #5a4800 !important;
+  font-family: var(--font-hand) !important;
+  font-size: 15px !important;
+}
+#agora-widget .window-title::before { content: ""; }
+#agora-widget .window-title::after  { content: ""; }
+#agora-widget .agora-date   { color: #7a6510 !important; font-family: var(--font-hand) !important; font-size: 13px !important; }
+#agora-widget .agora-list   { color: #2a2210 !important; font-family: var(--font-hand) !important; font-size: 17px !important; }
+#agora-widget .agora-bullet { color: #8a5800 !important; }
+#agora-widget .agora-note   { color: #7a6510 !important; border-top-color: #d8c43a !important; font-family: var(--font-hand) !important; }
+#agora-widget:hover { transform: rotate(0.5deg) translateY(-2px) !important; box-shadow: 5px 7px 20px rgba(0,0,0,0.38) !important; }
+
+/* ===== ANIME WIDGET — capa de VHS / tracklist ===== */
+#anime-widget {
+  background: #070812 !important;
+  border: 2px solid #14163a !important;
+  border-top: 3px solid #b040e8 !important;
+  border-radius: 0 !important;
+}
+#anime-widget .window-header {
+  background: linear-gradient(90deg, #180638, #070812) !important;
+  border-bottom: 1px solid #460880 !important;
+}
+#anime-widget .window-title {
+  color: #c050f0 !important;
+  font-family: var(--font-pixel) !important;
+  letter-spacing: 1px;
+}
+#anime-widget .window-title::before { content: ""; }
+#anime-widget .window-title::after  { content: ""; }
+#anime-widget .anime-list { gap: 0 !important; }
+#anime-widget .anime-entry {
+  border-bottom: 1px solid #14163a !important;
+  border-radius: 0 !important;
+  padding: 7px 12px !important;
+  font-family: var(--font-pixel) !important;
+  font-size: 15px !important;
+  color: #c0a8d8 !important;
+  transition: all 0.12s;
+}
+#anime-widget .anime-entry:hover {
+  background: rgba(176, 64, 232, 0.12) !important;
+  color: #d870ff !important;
+  padding-left: 20px !important;
+}
+#anime-widget .anime-bullet { color: #b040e8 !important; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .sidebar {
@@ -1283,6 +1668,28 @@ a { animation: link-flash 0.7s ease-out 0.5s both; }
   .widgets-row {
     grid-template-columns: 1fr;
   }
+
+  .contact-email-link {
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  .tech-tags {
+    gap: 5px;
+  }
+
+  .sobre-block {
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .diary-entry-holes {
+    display: none;
+  }
+
+  .win98-titlebar-text {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1304,5 +1711,67 @@ a { animation: link-flash 0.7s ease-out 0.5s both; }
 
   .taskbar-items {
     display: none;
+  }
+
+  .contact-email-link {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .contact-mailto {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .tech-tag {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+
+  .sobre-list li {
+    font-size: 13px;
+  }
+
+  .diary-text p {
+    font-size: 15px;
+  }
+
+  .diary-date {
+    font-size: 14px;
+  }
+
+  .sister-carta {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .sister-future {
+    font-size: 13px;
+  }
+
+  .now-playing-label {
+    font-size: 11px;
+  }
+
+  .song-name {
+    font-size: 15px;
+  }
+
+  .song-artist {
+    font-size: 12px;
+  }
+
+  .win98-titlebar-controls button {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .vibes-tags {
+    gap: 6px;
+  }
+
+  .vibe-tag {
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }

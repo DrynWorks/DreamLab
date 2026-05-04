@@ -11,85 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- Win98 CD Player -->
-  <style>
-    @font-face {
-      font-family: "Pixelated MS Sans Serif";
-      src: url("https://files.catbox.moe/1za99g.woff") format("woff");
-      font-weight: normal;
-    }
-    @font-face {
-      font-family: "Pixelated MS Sans Serif";
-      src: url("https://files.catbox.moe/z7csle.woff") format("woff");
-      font-weight: bold;
-    }
-
-    #music-player {
-      background: #c0c0c0 !important;
-      box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
-                  inset -2px -2px #808080, inset 2px 2px #ffffff !important;
-      padding: 3px !important;
-      border: none !important;
-    }
-    .win98-titlebar {
-      background: linear-gradient(90deg, purple, orchid, pink);
-      padding: 3px 2px 3px 3px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .win98-titlebar-text {
-      font-weight: bold;
-      color: white;
-      font-family: "Pixelated MS Sans Serif", Arial;
-      font-size: 11px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-right: 4px;
-    }
-    .win98-titlebar-text img { height: 14px; width: 14px; }
-    .win98-titlebar-controls { display: flex; }
-    .win98-titlebar-controls button {
-      padding: 0 !important;
-      display: block;
-      width: 16px !important;
-      min-width: 16px !important;
-      height: 14px;
-      min-height: 14px !important;
-      background: silver;
-      box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
-                  inset -2px -2px grey, inset 2px 2px #dfdfdf;
-      border: none;
-      border-radius: 0;
-    }
-    .win98-titlebar-controls button:active {
-      box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
-                  inset -2px -2px #dfdfdf, inset 2px 2px grey;
-    }
-    .win98-titlebar-controls button[aria-label="Minimize"] {
-      background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
-      background-position: bottom 3px left 4px;
-      background-repeat: no-repeat;
-    }
-    .win98-titlebar-controls button[aria-label="Maximize"] {
-      background-image: url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
-      background-position: top 2px left 3px;
-      background-repeat: no-repeat;
-    }
-    .win98-titlebar-controls button[aria-label="Close"] {
-      background-image: url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
-      background-position: top 3px left 4px;
-      background-repeat: no-repeat;
-      margin-left: 2px;
-    }
-    .win98-iframe-body {
-      margin: 2px 0 0 0;
-      padding: 0;
-      line-height: 0;
-    }
-    .win98-iframe-body iframe { display: block; }
-  </style>
+  <!-- Win98 player e estilos em style.css -->
 
   <!-- Sakura -->
   <style>
@@ -432,6 +354,26 @@
         </div>
 
       </div><!-- /anime-row -->
+
+      <!-- Contact Row -->
+      <div class="widgets-row" style="grid-template-columns: 1fr;">
+        <div class="window contact-card" id="contact-window" style="animation-delay: 0.38s;">
+          <div class="window-header">
+            <span class="window-title">contato.log</span>
+          </div>
+          <div class="window-body">
+            <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); margin-bottom: 12px;">
+              // se quiser falar comigo — respondo quando puder
+            </div>
+            <a href="mailto:adryan.alves.ribeiro@gmail.com" class="contact-email-link">
+              <span style="color: var(--green); flex-shrink:0;">&gt;</span>
+              adryan.alves.ribeiro@gmail.com
+            </a>
+            <div class="contact-note">// e-mail é a forma mais direta de me achar por enquanto</div>
+            <a href="mailto:adryan.alves.ribeiro@gmail.com" class="contact-mailto">[&gt;] abrir e-mail</a>
+          </div>
+        </div>
+      </div><!-- /contact-row -->
 
       <!-- Footer -->
       <footer class="site-footer" id="footer" style="margin-left: 0;">
