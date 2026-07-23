@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu Principal — DreamLab. Escolha para onde quer ir.">
+  <meta name="author" content="Dryn — DrynWorks">
+  <title>Menu Principal — DreamLab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="loading-bar"></div>
+  <div class="desktop-bg"></div>
+
+  <!-- Desktop Icons -->
+  <div class="desktop-icons">
+    <a href="index.html" class="desktop-icon">
+      <span class="desktop-icon-img">[~]</span>
+      <span class="desktop-icon-label">início</span>
+    </a>
+    <a href="artes.html" class="desktop-icon">
+      <span class="desktop-icon-img">[🎨]</span>
+      <span class="desktop-icon-label">artes.png</span>
+    </a>
+    <a href="links.html" class="desktop-icon">
+      <span class="desktop-icon-img">[🔗]</span>
+      <span class="desktop-icon-label">links.url</span>
+    </a>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="window profile-card" style="animation-delay: 0.05s;">
+        <div class="window-header">
+          <span class="window-title">profile.exe</span>
+        </div>
+        <div class="window-body">
+          <div class="profile-avatar">&gt;_</div>
+          <div class="profile-name">Dryn</div>
+          <div class="profile-status-label">status:</div>
+          <div class="profile-status">
+            <span class="status-dot"></span>
+            online
+          </div>
+          <div class="construction-tag">[ em construção ]</div>
+        </div>
+      </div>
+
+      <div class="window" style="animation-delay: 0.1s;">
+        <div class="window-header">
+          <span class="window-title">navegação</span>
+        </div>
+        <div class="window-body" style="padding: 8px;">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-item"><span class="nav-icon">~</span> início</a></li>
+            <li><a href="menu.html" class="nav-item active"><span class="nav-icon">📋</span> menu</a></li>
+            <li><a href="artes.html" class="nav-item"><span class="nav-icon">🎨</span> artes</a></li>
+            <li><a href="links.html" class="nav-item"><span class="nav-icon">🔗</span> links</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Win98 CD Player -->
+      <div class="window music-player" id="music-player" style="animation-delay: 0.15s;">
+        <div class="win98-titlebar">
+          <div class="win98-titlebar-text">
+            <img src="https://files.catbox.moe/tg55zp.png" alt="cd"> CD player
+          </div>
+          <div class="win98-titlebar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="win98-iframe-body">
+          <iframe width="100%" height="152"
+            src="https://www.youtube.com/embed/videoseries?list=PLjc7AFgJy25b03aCRT9rmCzUTGHx1Hnlt"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <!-- Header Window -->
+      <div class="window menu-header-window" style="animation-delay: 0.05s;">
+        <div class="window-header">
+          <span class="window-title">menu_principal.exe</span>
+        </div>
+        <div class="window-body">
+          <div class="menu-header-title">📋 Escolha uma Seção</div>
+          <div class="menu-header-sub">// selecione abaixo para onde quer navegar dentro do dreamlab</div>
+        </div>
+      </div>
+
+      <!-- Menu Options Grid -->
+      <div class="menu-options-grid">
+
+        <!-- Artes Option -->
+        <a href="artes.html" class="window menu-option-card artes-option" style="animation-delay: 0.12s;">
+          <div class="window-header">
+            <span class="window-title">secao_artes.exe</span>
+            <span class="arrow-indicator">→</span>
+          </div>
+          <div class="window-body option-body">
+            <div class="option-icon">🎨</div>
+            <div class="option-title">Seção Artes</div>
+            <div class="option-desc">Galeria com os 7 desenhos, rabiscos, murais e artes visuais por Dryn.</div>
+            <div class="option-badge">7 OBRAS ILUSTRADAS</div>
+          </div>
+        </a>
+
+        <!-- Links Option -->
+        <a href="links.html" class="window menu-option-card links-option" style="animation-delay: 0.18s;">
+          <div class="window-header">
+            <span class="window-title">secao_links.url</span>
+            <span class="arrow-indicator">→</span>
+          </div>
+          <div class="window-body option-body">
+            <div class="option-icon">🔗</div>
+            <div class="option-title">Seção Links</div>
+            <div class="option-desc">Links recomendados: GitHub, Minhas Playlists, MyDora e How Soon Is Now.</div>
+            <div class="option-badge">4 RECOMENDAÇÕES</div>
+          </div>
+        </a>
+
+      </div><!-- /menu-options-grid -->
+
+      <!-- Footer -->
+      <footer class="site-footer" style="margin-left: 0;">
+        <div class="footer-text">© DrynWorks 2026 — feito com HTML puro e muito café ·</div>
+        <div class="footer-online">· feito à mão com html puro · drynworks 2026 ·</div>
+        <div class="footer-badges">
+          <span class="footer-badge">HTML</span>
+          <span class="footer-badge">CSS</span>
+          <span class="footer-badge">MENU</span>
+          <span class="footer-badge">♡ feito à mão</span>
+        </div>
+      </footer>
+
+    </div><!-- /main-content -->
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <button class="taskbar-start">* Dryn</button>
+    <div class="taskbar-separator"></div>
+    <div class="taskbar-items">
+      <a href="index.html" class="taskbar-item">~ início</a>
+      <a href="menu.html" class="taskbar-item active">📋 menu</a>
+      <a href="artes.html" class="taskbar-item">🎨 artes</a>
+      <a href="links.html" class="taskbar-item">🔗 links</a>
+    </div>
+    <div class="taskbar-clock" id="taskbar-clock"></div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('taskbar-clock').textContent = h + ':' + m;
+    }
+    updateClock();
+    setInterval(updateClock, 30000);
+  </script>
+
+</body>
+</html>
