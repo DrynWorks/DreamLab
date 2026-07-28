@@ -1,458 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="gray">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="DreamLab — Página pessoal do Dryn. Skate, basquete, anime e código. Um pedaço da internet que é meu.">
-  <meta name="author" content="Dryn — DrynWorks">
-  <title>DreamLab — Dryn's Desktop</title>
+  <meta name="description" content="DreamLab — página pessoal de Dryn.">
+  <meta name="author" content="DrynWorks">
+  <title>DreamLab</title>
   <link rel="stylesheet" href="style.css">
+  <script src="js/theme.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Sakura -->
-  <style>
-    @keyframes fall {
-      0% {
-        opacity: 0.9;
-        top: 0
-      }
-
-      100% {
-        opacity: 0.2;
-        top: 100%
-      }
-    }
-
-    @keyframes blow-soft-left {
-      0% {
-        margin-left: 0
-      }
-
-      100% {
-        margin-left: -50%
-      }
-    }
-
-    @keyframes blow-medium-left {
-      0% {
-        margin-left: 0
-      }
-
-      100% {
-        margin-left: -100%
-      }
-    }
-
-    @keyframes blow-soft-right {
-      0% {
-        margin-left: 0
-      }
-
-      100% {
-        margin-left: 50%
-      }
-    }
-
-    @keyframes blow-medium-right {
-      0% {
-        margin-left: 0
-      }
-
-      100% {
-        margin-left: 100%
-      }
-    }
-
-    @keyframes sway-0 {
-      0% {
-        transform: rotate(-5deg)
-      }
-
-      40% {
-        transform: rotate(28deg)
-      }
-
-      100% {
-        transform: rotate(3deg)
-      }
-    }
-
-    @keyframes sway-1 {
-      0% {
-        transform: rotate(10deg)
-      }
-
-      40% {
-        transform: rotate(43deg)
-      }
-
-      100% {
-        transform: rotate(15deg)
-      }
-    }
-
-    @keyframes sway-2 {
-      0% {
-        transform: rotate(15deg)
-      }
-
-      40% {
-        transform: rotate(56deg)
-      }
-
-      100% {
-        transform: rotate(22deg)
-      }
-    }
-
-    @keyframes sway-3 {
-      0% {
-        transform: rotate(25deg)
-      }
-
-      40% {
-        transform: rotate(74deg)
-      }
-
-      100% {
-        transform: rotate(37deg)
-      }
-    }
-
-    @keyframes sway-4 {
-      0% {
-        transform: rotate(40deg)
-      }
-
-      40% {
-        transform: rotate(68deg)
-      }
-
-      100% {
-        transform: rotate(25deg)
-      }
-    }
-
-    @keyframes sway-5 {
-      0% {
-        transform: rotate(50deg)
-      }
-
-      40% {
-        transform: rotate(78deg)
-      }
-
-      100% {
-        transform: rotate(40deg)
-      }
-    }
-
-    @keyframes sway-6 {
-      0% {
-        transform: rotate(65deg)
-      }
-
-      40% {
-        transform: rotate(92deg)
-      }
-
-      100% {
-        transform: rotate(58deg)
-      }
-    }
-
-    @keyframes sway-7 {
-      0% {
-        transform: rotate(72deg)
-      }
-
-      40% {
-        transform: rotate(118deg)
-      }
-
-      100% {
-        transform: rotate(68deg)
-      }
-    }
-
-    @keyframes sway-8 {
-      0% {
-        transform: rotate(94deg)
-      }
-
-      40% {
-        transform: rotate(136deg)
-      }
-
-      100% {
-        transform: rotate(82deg)
-      }
-    }
-
-    .sakura {
-      background: linear-gradient(120deg, rgba(255, 183, 197, 0.9), rgba(255, 197, 208, 0.9));
-      pointer-events: none;
-      position: fixed;
-      z-index: 0;
-    }
-  </style>
 </head>
 
 <body class="splash-body">
 
-  <!-- Barra de progresso de carregamento -->
   <div id="loading-bar"></div>
-
-  <!-- Desktop background -->
   <div class="desktop-bg"></div>
 
-  <!-- Main Splash Dual Windows Container -->
   <div class="splash-container">
     <div class="splash-dual-grid">
 
-      <!-- JANELA DA ESQUERDA: moon_view.gif -->
+      <!-- Visualizador -->
       <div class="win95-window splash-media-window">
         <div class="win95-titlebar">
-          <div class="win95-titlebar-title">
-            <span>🖼</span> moon_view.gif
-          </div>
+          <div class="win95-titlebar-title">Viewer</div>
           <div class="win95-titlebar-controls">
             <button class="win95-btn" aria-label="Minimize">_</button>
-            <button class="win95-btn" aria-label="Maximize">□</button>
-            <button class="win95-btn" aria-label="Close">×</button>
+            <button class="win95-btn" aria-label="Maximize">&#9633;</button>
+            <button class="win95-btn" aria-label="Close">&times;</button>
           </div>
         </div>
         <div class="win95-body media-body">
           <img
             src="images/Classy%20Issues%20Inspo%20by%20Mux%20Jasper%20%23muxjasper%20%23fivedoubleues%20%23luxury%20%23inspo%20%23classyissue.gif"
-            alt="moon_view.gif" class="moon-gif">
+            alt="" class="moon-gif">
         </div>
       </div>
 
-      <!-- JANELA DA DIREITA: DRYNLAB.EXE Terminal -->
+      <!-- Terminal -->
       <div class="win95-window splash-terminal-window">
         <div class="win95-titlebar">
-          <div class="win95-titlebar-title" id="term-title">
-            <span>💻</span> drynlab.exe
-          </div>
+          <div class="win95-titlebar-title" id="term-title">DRYNLAB</div>
           <div class="win95-titlebar-controls">
             <button class="win95-btn" aria-label="Minimize">_</button>
-            <button class="win95-btn" aria-label="Maximize">□</button>
-            <button class="win95-btn" aria-label="Close">×</button>
+            <button class="win95-btn" aria-label="Maximize">&#9633;</button>
+            <button class="win95-btn" aria-label="Close">&times;</button>
           </div>
         </div>
         <div class="win95-body terminal-body crt-overlay">
           <div id="terminal-output" class="terminal-content"></div>
           <div id="enter-button-wrapper" class="enter-button-wrapper"
-            style="opacity: 0; pointer-events: none; transition: opacity 0.6s ease;">
-            <a href="menu.html" class="win95-enter-button" id="enter-btn">
-              <span class="enter-text">[ ENTER ]</span>
-              <span class="enter-sub">acessar dreamlab</span>
-            </a>
+            style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;">
+            <a href="menu.html" class="win95-enter-button" id="enter-btn">[ ENTER ]</a>
           </div>
         </div>
       </div>
 
     </div>
-  </div><!-- /splash-container -->
+  </div>
 
-  <!-- SCRIPTS -->
+  <!-- Seletor de temas compacto -->
+  <div data-theme-switcher data-compact></div>
+
   <script>
-    // Sequência de digitação do Terminal
+    // Sequência de digitação do terminal
     (function () {
-      const lines = [
+      var lines = [
         "> boot sequence initialized...",
         "> checking system...",
         "> loading assets...",
         "> connecting...",
-        "> synchronizing memories...",
         "> connection established.",
         "> welcome."
       ];
 
-      let lineIndex = 0;
-      let charIndex = 0;
-      const terminalOutput = document.getElementById('terminal-output');
-      const enterWrapper = document.getElementById('enter-button-wrapper');
+      var lineIndex = 0;
+      var charIndex = 0;
 
       function typeNext() {
-        if (!terminalOutput) return;
+        var output = document.getElementById('terminal-output');
+        var enterWrapper = document.getElementById('enter-button-wrapper');
+        if (!output) return;
 
         if (lineIndex < lines.length) {
-          const currentText = lines[lineIndex];
-          let currentLineEl = document.getElementById(`term-line-${lineIndex}`);
+          var currentText = lines[lineIndex];
+          var el = document.getElementById('term-line-' + lineIndex);
 
-          if (!currentLineEl) {
-            currentLineEl = document.createElement('div');
-            currentLineEl.id = `term-line-${lineIndex}`;
-            currentLineEl.className = 'terminal-line';
-            if (lineIndex === lines.length - 1) {
-              currentLineEl.classList.add('highlight-line');
-            }
-            terminalOutput.appendChild(currentLineEl);
+          if (!el) {
+            el = document.createElement('div');
+            el.id = 'term-line-' + lineIndex;
+            el.className = 'terminal-line';
+            if (lineIndex === lines.length - 1) el.classList.add('highlight-line');
+            output.appendChild(el);
           }
 
           if (charIndex < currentText.length) {
-            currentLineEl.textContent = currentText.substring(0, charIndex + 1);
+            el.textContent = currentText.substring(0, charIndex + 1);
             charIndex++;
-            setTimeout(typeNext, 30);
+            setTimeout(typeNext, 28);
           } else {
             lineIndex++;
             charIndex = 0;
-            setTimeout(typeNext, 220);
+            setTimeout(typeNext, 200);
           }
         } else {
-          // Cursor piscando ao final
-          const cursor = document.createElement('span');
+          var cursor = document.createElement('span');
           cursor.className = 'terminal-cursor';
-          terminalOutput.appendChild(cursor);
+          output.appendChild(cursor);
 
-          // Exibe botão ENTER após aproximadamente 1 segundo (1000ms)
           setTimeout(function () {
             if (enterWrapper) {
               enterWrapper.style.opacity = '1';
               enterWrapper.style.pointerEvents = 'auto';
             }
-          }, 1000);
+          }, 800);
         }
       }
 
       document.addEventListener('DOMContentLoaded', typeNext);
     })();
 
-    // Redirect to menu on pressing Enter key anywhere on page
+    // Enter em qualquer lugar entra no site
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        window.location.href = 'menu.html';
-      }
+      if (e.key === 'Enter') window.location.href = 'menu.html';
     });
 
-    // Favicon gerado via canvas
+    // Favicon gerado via canvas, seguindo as cores do tema
     (function () {
-      const c = document.createElement('canvas');
-      c.width = 32; c.height = 32;
-      const ctx = c.getContext('2d');
-      ctx.fillStyle = '#1a1d2e';
-      ctx.fillRect(0, 0, 32, 32);
-      ctx.fillStyle = '#7ab87a';
-      ctx.font = 'bold 22px monospace';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText('D', 16, 17);
-      const lnk = document.createElement('link');
-      lnk.rel = 'icon';
-      lnk.href = c.toDataURL();
-      document.head.appendChild(lnk);
+      function draw() {
+        var css = getComputedStyle(document.documentElement);
+        var bg = (css.getPropertyValue('--titlebar') || '#3f4247').trim();
+        var fg = (css.getPropertyValue('--titlebar-text') || '#ffffff').trim();
+
+        var c = document.createElement('canvas');
+        c.width = 32;
+        c.height = 32;
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, 32, 32);
+        ctx.fillStyle = fg;
+        ctx.font = 'bold 22px monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('D', 16, 17);
+
+        var lnk = document.querySelector('link[rel="icon"]') || document.createElement('link');
+        lnk.rel = 'icon';
+        lnk.href = c.toDataURL();
+        document.head.appendChild(lnk);
+      }
+
+      document.addEventListener('DOMContentLoaded', draw);
+      document.addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('[data-set-theme]')) setTimeout(draw, 0);
+      });
     })();
 
-    // Glitch sutil no título DRYNLAB.EXE
+    // Glitch discreto no título do terminal
     (function () {
-      const el = document.getElementById('term-title');
-      if (!el) return;
-      const glitchChars = ['░', '▒', '▓', '■', '◆', '⊕', 'Ж', 'Ω', '∆', '≡', '⊗'];
+      var chars = ['░', '▒', '▓', '■', '◆', '≡'];
       setInterval(function () {
-        const text = "DRYNLAB.EXE";
-        const idx = Math.floor(Math.random() * text.length);
-        const ch = glitchChars[Math.floor(Math.random() * glitchChars.length)];
-        const glitchedText = text.substring(0, idx) + ch + text.substring(idx + 1);
-        el.innerHTML = '<span>💻</span> ' + glitchedText;
-        setTimeout(function () {
-          el.innerHTML = '<span>💻</span> DRYNLAB.EXE';
-        }, 120);
+        var el = document.getElementById('term-title');
+        if (!el) return;
+        var text = 'DRYNLAB';
+        var idx = Math.floor(Math.random() * text.length);
+        var ch = chars[Math.floor(Math.random() * chars.length)];
+        el.textContent = text.substring(0, idx) + ch + text.substring(idx + 1);
+        setTimeout(function () { el.textContent = text; }, 110);
       }, 8000);
     })();
   </script>
 
-  <!-- Sakura plugin -->
-  <script>
-    (function ($) {
-      var lastTime = 0;
-      var vendors = ['webkit', 'o', 'ms', 'moz', ''];
-      for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
-      }
-      if (!window.requestAnimationFrame) {
-        window.requestAnimationFrame = function (cb) {
-          var now = new Date().getTime();
-          var wait = Math.max(0, 16 - (now - lastTime));
-          var id = window.setTimeout(function () { cb(now + wait); }, wait);
-          lastTime = now + wait;
-          return id;
-        };
-      }
-      if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) { clearTimeout(id); };
+  <script src="js/sakura.js"></script>
 
-      $.fn.prefixedEvent = function (type, cb) {
-        for (var x = 0; x < vendors.length; ++x) {
-          var t = vendors[x] ? vendors[x] + type : type.toLowerCase();
-          (this instanceof jQuery ? this[0] : this).addEventListener(t, cb, false);
-        }
-        return this;
-      };
-
-      function inViewport(el) {
-        if (el instanceof jQuery) el = el[0];
-        var r = el.getBoundingClientRect();
-        return r.top >= 0 && r.left >= 0 &&
-          r.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          r.right <= (window.innerWidth || document.documentElement.clientWidth);
-      }
-      function rndArr(a) { return a[Math.floor(Math.random() * a.length)]; }
-      function rndInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-
-      $.fn.sakura = function (event, options) {
-        var target = this.selector === '' ? $('body') : this;
-        var defaults = {
-          blowAnimations: ['blow-soft-left', 'blow-medium-left', 'blow-soft-right', 'blow-medium-right'],
-          className: 'sakura', fallSpeed: 1, maxSize: 14, minSize: 10, newOn: 300,
-          swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
-        };
-        options = $.extend({}, defaults, options);
-
-        if (typeof event === 'undefined' || event === 'start') {
-          target.css('overflow-x', 'hidden');
-          var creator = function () {
-            if (target.data('sakura-anim-id')) {
-              setTimeout(function () { requestAnimationFrame(creator); }, options.newOn);
-            }
-            var blow = rndArr(options.blowAnimations);
-            var sway = rndArr(options.swayAnimations);
-            var fallTime = ((document.documentElement.clientHeight * 0.007) + Math.round(Math.random() * 5)) * options.fallSpeed;
-            var anims =
-              'fall ' + fallTime + 's linear 0s 1, ' +
-              blow + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + rndInt(0, 20)) + 's linear 0s infinite, ' +
-              sway + ' ' + rndInt(2, 4) + 's linear 0s infinite';
-            var petal = $('<div class="' + options.className + '"/>');
-            var h = rndInt(options.minSize, options.maxSize);
-            var w = h - Math.floor(rndInt(0, options.minSize) / 3);
-            petal.prefixedEvent('AnimationEnd', function () { if (!inViewport(this)) $(this).remove(); })
-              .prefixedEvent('AnimationIteration', function (ev) {
-                if (($.inArray(ev.animationName, options.blowAnimations) !== -1 ||
-                  $.inArray(ev.animationName, options.swayAnimations) !== -1) && !inViewport(this)) $(this).remove();
-              })
-              .css({
-                animation: anims, '-webkit-animation': anims,
-                'border-radius': rndInt(options.maxSize, options.maxSize + Math.floor(Math.random() * 10)) + 'px ' + rndInt(1, Math.floor(w / 4)) + 'px',
-                height: h + 'px', width: w + 'px',
-                left: (Math.random() * document.documentElement.clientWidth - 100) + 'px',
-                'margin-top': -(Math.floor(Math.random() * 20) + 15) + 'px'
-              });
-            target.append(petal);
-          };
-          target.data('sakura-anim-id', requestAnimationFrame(creator));
-        } else if (event === 'stop') {
-          var id = target.data('sakura-anim-id');
-          if (id) { cancelAnimationFrame(id); target.data('sakura-anim-id', null); }
-          setTimeout(function () { $('.' + options.className).remove(); }, options.newOn + 50);
-        }
-      };
-    }(jQuery));
-
-    $(document).ready(function () { $('body').sakura(); });
-  </script>
 </body>
 
 </html>

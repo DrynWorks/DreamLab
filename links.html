@@ -1,225 +1,210 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="gray">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Links Recomendados — DreamLab. GitHub, Playlists, MyDora e How Soon Is Now.">
-  <meta name="author" content="Dryn — DrynWorks">
-  <title>Links — DreamLab</title>
+  <meta name="description" content="Links recomendados por Dryn.">
+  <meta name="author" content="DrynWorks">
+  <title>DreamLab — Links</title>
   <link rel="stylesheet" href="style.css">
+  <script src="js/theme.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
 
   <div id="loading-bar"></div>
   <div class="desktop-bg"></div>
 
-  <!-- Desktop Icons -->
-  <div class="desktop-icons">
-    <a href="index.html" class="desktop-icon">
-      <span class="desktop-icon-img">[~]</span>
-      <span class="desktop-icon-label">início</span>
-    </a>
-    <a href="menu.html" class="desktop-icon">
-      <span class="desktop-icon-img">[📋]</span>
-      <span class="desktop-icon-label">menu.exe</span>
-    </a>
-    <a href="artes.html" class="desktop-icon">
-      <span class="desktop-icon-img">[🎨]</span>
-      <span class="desktop-icon-label">artes.png</span>
-    </a>
-  </div>
+  <div class="outer-window">
 
-  <div class="page-wrapper">
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="window profile-card" style="animation-delay: 0.05s;">
-        <div class="window-header">
-          <span class="window-title">profile.exe</span>
-        </div>
-        <div class="window-body">
-          <div class="profile-avatar">
-            <img src="images/download.jfif" alt="Dryn" class="profile-photo">
-          </div>
-          <div class="profile-name">Dryn</div>
-          <div class="profile-status-label">status:</div>
-          <div class="profile-status">
-            <span class="status-dot"></span>
-            online
-          </div>
-          <div class="profile-feeling">
-            <div class="profile-status-label">feeling:</div>
-            <a href="https://www.imood.com/users/dryn"><img src="https://moods.imood.com/display/uname-dryn/imood.gif" alt="The current mood of dryn at www.imood.com" border="0" class="imood-badge"></a>
-          </div>
-          <div class="construction-tag">[ em construção ]</div>
-        </div>
-      </div>
-
-      <div class="window" style="animation-delay: 0.1s;">
-        <div class="window-header">
-          <span class="window-title">navegação</span>
-        </div>
-        <div class="window-body" style="padding: 8px;">
-          <ul class="nav-list">
-            <li><a href="index.html" class="nav-item"><span class="nav-icon">~</span> início</a></li>
-            <li><a href="menu.html" class="nav-item"><span class="nav-icon">📋</span> menu</a></li>
-            <li><a href="artes.html" class="nav-item"><span class="nav-icon">🎨</span> artes</a></li>
-            <li><a href="links.html" class="nav-item active"><span class="nav-icon">🔗</span> links</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Win98 CD Player -->
-      <div class="window music-player" id="music-player" style="animation-delay: 0.15s;">
-        <div class="win98-titlebar">
-          <div class="win98-titlebar-text">
-            <img src="https://files.catbox.moe/tg55zp.png" alt="cd"> CD player
-          </div>
-          <div class="win98-titlebar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="win98-iframe-body">
-          <iframe width="100%" height="152"
-            src="https://www.youtube.com/embed/videoseries?list=PLjc7AFgJy25b03aCRT9rmCzUTGHx1Hnlt"
-            frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="outer-titlebar">
+      <span class="outer-titlebar-title">DreamLab — Links</span>
+      <div class="win98-titlebar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
       </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
+    <div class="outer-body">
 
-      <!-- Header Window -->
-      <div class="window links-header-window" style="animation-delay: 0.05s;">
-        <div class="window-header">
-          <span class="window-title">links.cfg — Coleção de Links</span>
-        </div>
-        <div class="window-body">
-          <div class="links-header-title">🔗 Links</div>
-          <div class="links-header-sub">// páginas, códigos, músicas e lugares legais na web</div>
+      <div class="header-banner">
+        <div class="banner-title">DreamLab</div>
+      </div>
+
+      <div class="marquee-bar">
+        <div class="marquee-content">
+          ART <span class="sep">·</span> MUSIC <span class="sep">·</span> CODE <span class="sep">·</span> SKATE <span class="sep">·</span> WEB <span class="sep">·</span>
+          ART <span class="sep">·</span> MUSIC <span class="sep">·</span> CODE <span class="sep">·</span> SKATE <span class="sep">·</span> WEB <span class="sep">·</span>
         </div>
       </div>
 
-      <!-- Links Cards Container -->
-      <div class="links-page-container">
+      <div class="site-columns">
 
-        <!-- GitHub -->
-        <a href="https://github.com/DrynWorks" target="_blank" rel="noopener" class="window link-page-card" style="animation-delay: 0.1s;">
-          <div class="window-header">
-            <span class="window-title">github.sh — DrynWorks</span>
-            <span class="link-external-icon">↗</span>
-          </div>
-          <div class="window-body link-card-body">
-            <div class="link-card-left">
-              <span class="link-card-icon">&gt;</span>
-            </div>
-            <div class="link-card-right">
-              <div class="link-card-name">GitHub — DrynWorks</div>
-              <div class="link-card-url">github.com/DrynWorks</div>
-              <div class="link-card-desc">Meus projetos de código, repositórios e desenvolvimentos.</div>
-            </div>
-          </div>
-        </a>
+        <!-- Sidebar -->
+        <div class="site-sidebar">
 
-        <!-- Playlists -->
-        <a href="https://youtube.com/@dryn.k" target="_blank" rel="noopener" class="window link-page-card" style="animation-delay: 0.15s;">
-          <div class="window-header">
-            <span class="window-title">playlists.m3u — Minhas Playlists</span>
-            <span class="link-external-icon">↗</span>
-          </div>
-          <div class="window-body link-card-body">
-            <div class="link-card-left">
-              <span class="link-card-icon">~</span>
+          <div class="window profile-card" style="animation-delay: 0.04s;">
+            <div class="window-header">
+              <span class="window-title">Profile</span>
             </div>
-            <div class="link-card-right">
-              <div class="link-card-name">Minhas Playlists</div>
-              <div class="link-card-url">youtube.com/@dryn.k</div>
-              <div class="link-card-desc">Minhas seleções e playlists de músicas para ouvir no repeat.</div>
+            <div class="window-body">
+              <div class="profile-avatar">
+                <img src="images/download.jfif" alt="Dryn" class="profile-photo">
+              </div>
+              <div class="profile-name">Dryn</div>
+              <div class="profile-status">
+                <span class="status-dot"></span> online
+              </div>
+              <div class="profile-feeling">
+                <div class="profile-status-label">mood</div>
+                <a href="https://www.imood.com/users/dryn" target="_blank" rel="noopener"><img
+                    src="https://moods.imood.com/display/uname-dryn/imood.gif" alt="mood" class="imood-badge"></a>
+              </div>
             </div>
           </div>
-        </a>
 
-        <!-- MyDora -->
-        <a href="https://mydora.restorativland.org/" target="_blank" rel="noopener" class="window link-page-card" style="animation-delay: 0.2s;">
-          <div class="window-header">
-            <span class="window-title">mydora.web — Toca Músicas</span>
-            <span class="link-external-icon">↗</span>
-          </div>
-          <div class="window-body link-card-body">
-            <div class="link-card-left">
-              <span class="link-card-icon">♫</span>
+          <div class="window" style="animation-delay: 0.08s;">
+            <div class="window-header">
+              <span class="window-title">Menu</span>
             </div>
-            <div class="link-card-right">
-              <div class="link-card-name">MyDora</div>
-              <div class="link-card-url">mydora.restorativland.org</div>
-              <div class="link-card-desc">Player retrô que toca músicas muito legais.</div>
+            <div class="window-body" style="padding: 6px;">
+              <ul class="nav-list">
+                <li><a href="menu.html" class="nav-item"><span class="nav-icon">&gt;</span> HOME</a></li>
+                <li><a href="artes.html" class="nav-item"><span class="nav-icon">&gt;</span> GALLERY</a></li>
+                <li><a href="links.html" class="nav-item active"><span class="nav-icon">&gt;</span> LINKS</a></li>
+              </ul>
             </div>
           </div>
-        </a>
 
-        <!-- How Soon Is Now -->
-        <a href="https://howsoonisnow.org/" target="_blank" rel="noopener" class="window link-page-card" style="animation-delay: 0.25s;">
-          <div class="window-header">
-            <span class="window-title">hsin.html — Site Recomendado</span>
-            <span class="link-external-icon">↗</span>
-          </div>
-          <div class="window-body link-card-body">
-            <div class="link-card-left">
-              <span class="link-card-icon">★</span>
+          <div class="window" style="animation-delay: 0.12s;">
+            <div class="window-header">
+              <span class="window-title">Theme</span>
             </div>
-            <div class="link-card-right">
-              <div class="link-card-name">How Soon Is Now?</div>
-              <div class="link-card-url">howsoonisnow.org</div>
-              <div class="link-card-desc">Site pessoal incrível com uma atmosfera única.</div>
+            <div class="window-body" style="padding: 6px;">
+              <div data-theme-switcher></div>
             </div>
           </div>
-        </a>
 
-      </div><!-- /links-page-container -->
+          <div class="window music-player" id="music-player" style="animation-delay: 0.16s;">
+            <div class="win98-titlebar">
+              <div class="win98-titlebar-text">
+                <img src="https://files.catbox.moe/tg55zp.png" alt=""> Player
+              </div>
+              <div class="win98-titlebar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="win98-iframe-body">
+              <iframe width="100%" height="152"
+                src="https://www.youtube.com/embed/videoseries?list=PLjc7AFgJy25b03aCRT9rmCzUTGHx1Hnlt"
+                title="Player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
 
-      <!-- Footer -->
-      <footer class="site-footer" style="margin-left: 0;">
-        <div class="footer-text">© DrynWorks 2026 — feito com HTML puro e muito café ·</div>
-        <div class="footer-online">· feito à mão com html puro · drynworks 2026 ·</div>
-        <div class="footer-badges">
-          <span class="footer-badge">HTML</span>
-          <span class="footer-badge">CSS</span>
-          <span class="footer-badge">LINKS</span>
-          <span class="footer-badge">♡ feito à mão</span>
-        </div>
+        </div><!-- /site-sidebar -->
+
+        <!-- Main -->
+        <div class="site-main">
+
+          <div class="page-head" style="animation-delay: 0.04s;">
+            <span class="page-title">LINKS</span>
+          </div>
+
+          <div class="links-page-container">
+
+            <a href="https://github.com/DrynWorks" target="_blank" rel="noopener" class="window link-page-card"
+              style="animation-delay: 0.08s;">
+              <div class="window-header">
+                <span class="window-title">GitHub</span>
+                <span class="link-external-icon">&#8599;</span>
+              </div>
+              <div class="link-card-body">
+                <div class="link-card-left">
+                  <span class="link-card-icon">&gt;</span>
+                </div>
+                <div class="link-card-right">
+                  <div class="link-card-name">GitHub — DrynWorks</div>
+                  <div class="link-card-url">github.com/DrynWorks</div>
+                  <div class="link-card-desc">Meus projetos de código, repositórios e desenvolvimentos.</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://youtube.com/@dryn.k" target="_blank" rel="noopener" class="window link-page-card"
+              style="animation-delay: 0.12s;">
+              <div class="window-header">
+                <span class="window-title">Playlists</span>
+                <span class="link-external-icon">&#8599;</span>
+              </div>
+              <div class="link-card-body">
+                <div class="link-card-left">
+                  <span class="link-card-icon">~</span>
+                </div>
+                <div class="link-card-right">
+                  <div class="link-card-name">Minhas Playlists</div>
+                  <div class="link-card-url">youtube.com/@dryn.k</div>
+                  <div class="link-card-desc">Minhas seleções e playlists de músicas para ouvir no repeat.</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://mydora.restorativland.org/" target="_blank" rel="noopener" class="window link-page-card"
+              style="animation-delay: 0.16s;">
+              <div class="window-header">
+                <span class="window-title">MyDora</span>
+                <span class="link-external-icon">&#8599;</span>
+              </div>
+              <div class="link-card-body">
+                <div class="link-card-left">
+                  <span class="link-card-icon">&#9834;</span>
+                </div>
+                <div class="link-card-right">
+                  <div class="link-card-name">MyDora</div>
+                  <div class="link-card-url">mydora.restorativland.org</div>
+                  <div class="link-card-desc">Player retrô que toca músicas muito legais.</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://howsoonisnow.org/" target="_blank" rel="noopener" class="window link-page-card"
+              style="animation-delay: 0.2s;">
+              <div class="window-header">
+                <span class="window-title">How Soon Is Now</span>
+                <span class="link-external-icon">&#8599;</span>
+              </div>
+              <div class="link-card-body">
+                <div class="link-card-left">
+                  <span class="link-card-icon">&#9733;</span>
+                </div>
+                <div class="link-card-right">
+                  <div class="link-card-name">How Soon Is Now?</div>
+                  <div class="link-card-url">howsoonisnow.org</div>
+                  <div class="link-card-desc">Site pessoal incrível com uma atmosfera única.</div>
+                </div>
+              </div>
+            </a>
+
+          </div><!-- /links-page-container -->
+
+        </div><!-- /site-main -->
+
+      </div><!-- /site-columns -->
+
+      <footer class="site-footer">
+        <div class="footer-text">@ DrynWorks</div>
       </footer>
 
-    </div><!-- /main-content -->
+    </div><!-- /outer-body -->
 
-  </div><!-- /page-wrapper -->
+  </div><!-- /outer-window -->
 
-  <!-- Taskbar -->
-  <div class="taskbar">
-    <button class="taskbar-start">* Dryn</button>
-    <div class="taskbar-separator"></div>
-    <div class="taskbar-items">
-      <a href="index.html" class="taskbar-item">~ início</a>
-      <a href="menu.html" class="taskbar-item">📋 menu</a>
-      <a href="artes.html" class="taskbar-item">🎨 artes</a>
-      <a href="links.html" class="taskbar-item active">🔗 links</a>
-    </div>
-    <div class="taskbar-clock" id="taskbar-clock"></div>
-  </div>
-
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const h = String(now.getHours()).padStart(2, '0');
-      const m = String(now.getMinutes()).padStart(2, '0');
-      document.getElementById('taskbar-clock').textContent = h + ':' + m;
-    }
-    updateClock();
-    setInterval(updateClock, 30000);
-  </script>
+  <script src="js/sakura.js"></script>
 
 </body>
+
 </html>
