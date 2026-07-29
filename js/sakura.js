@@ -60,7 +60,12 @@
         var petal = $('<div class="' + options.className + '"/>');
         var h = rndInt(options.minSize, options.maxSize);
         var w = h - Math.floor(rndInt(0, options.minSize) / 3);
-        petal.prefixedEvent('AnimationEnd', function () { if (!inViewport(this)) $(this).remove(); })
+        // 'fall' roda uma vez e não tem fill-mode: ao terminar, o top volta a
+        // 'auto' e a pétala salta para a posição estática, ficando presa na
+        // tela. Terminou de cair, some — independente de estar na viewport.
+        petal.prefixedEvent('AnimationEnd', function (ev) {
+          if (ev.animationName === 'fall' || !inViewport(this)) $(this).remove();
+        })
           .prefixedEvent('AnimationIteration', function (ev) {
             if (($.inArray(ev.animationName, options.blowAnimations) !== -1 ||
               $.inArray(ev.animationName, options.swayAnimations) !== -1) && !inViewport(this)) $(this).remove();

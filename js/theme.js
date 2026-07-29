@@ -7,17 +7,16 @@
   'use strict';
 
   var STORAGE_KEY = 'dreamlab-theme';
-  var DEFAULT_THEME = 'gray';
+  var DEFAULT_THEME = 'black';
 
   /* a / b = cores da amostra mostrada no seletor */
   var THEMES = [
-    { id: 'gray',   label: 'GRAY',   a: '#c6c6c6', b: '#4b4f54' },
-    { id: 'light',  label: 'LIGHT',  a: '#ffffff', b: '#b9b7b0' },
+    { id: 'black',  label: 'BLACK',  a: '#2b2b2b', b: '#000000' },
     { id: 'dark',   label: 'DARK',   a: '#5a626e', b: '#101216' },
     { id: 'purple', label: 'PURPLE', a: '#ece2f6', b: '#4a1a70' },
     { id: 'blue',   label: 'BLUE',   a: '#d8e4f0', b: '#0a2a6a' },
     { id: 'red',    label: 'RED',    a: '#eddfdf', b: '#6e1414' },
-    { id: 'black',  label: 'BLACK',  a: '#2b2b2b', b: '#000000' }
+    { id: 'green',  label: 'GREEN',  a: '#dcecdf', b: '#14562a' }
   ];
 
   function isValid(id) {

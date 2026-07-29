@@ -39,57 +39,32 @@
 
 /* ===== 02 · TEMAS ===== */
 :root,
-:root[data-theme="gray"] {
-  --background: #5f6469;
-  --background-2: #4b4f54;
-  --surface: #c6c6c6;
-  --surface-alt: #dedede;
-  --surface-sunken: #9d9d9d;
-  --titlebar: #3f4247;
-  --titlebar-2: #7e838a;
-  --titlebar-text: #ffffff;
-  --titlebar-text-dim: #d3d6da;
-  --border-light: #ffffff;
-  --border-dark: #7a7a7a;
-  --border-outer: #1e1e1e;
-  --text: #16181a;
-  --muted: #5c6166;
-  --link: #1f3f7a;
-  --link-hover: #0d224d;
-  --accent: #2f5d94;
-  --accent-contrast: #ffffff;
-  --fx-stars: 0.35;
-  --fx-petal: 0.5;
-  --petal-a: rgba(255, 183, 197, 0.9);
-  --petal-b: rgba(255, 197, 208, 0.9);
+:root[data-theme="black"] {
+  --background: #000000;
+  --background-2: #070707;
+  --surface: #0e0e0e;
+  --surface-alt: #171717;
+  --surface-sunken: #050505;
+  --titlebar: #101010;
+  --titlebar-2: #2b2b2b;
+  --titlebar-text: #f0f0f0;
+  --titlebar-text-dim: #a8a8a8;
+  --border-light: #3d3d3d;
+  --border-dark: #000000;
+  --border-outer: #383838;
+  --text: #d8d8d8;
+  --muted: #7d7d7d;
+  --link: #e6e6e6;
+  --link-hover: #ffffff;
+  --accent: #ffffff;
+  --accent-contrast: #000000;
+  --fx-stars: 0.7;
+  --fx-petal: 0.35;
+  --petal-a: rgba(200, 200, 200, 0.7);
+  --petal-b: rgba(230, 230, 230, 0.7);
   /* fundo dos botõezinhos de janela — os ícones são SVG pretos,
      então em temas escuros precisa de uma face clara */
-  --control-face: var(--surface);
-}
-
-:root[data-theme="light"] {
-  --background: #d9d7d1;
-  --background-2: #c9c7c1;
-  --surface: #ffffff;
-  --surface-alt: #f2f1ed;
-  --surface-sunken: #e4e2dc;
-  --titlebar: #b9b7b0;
-  --titlebar-2: #d8d6d0;
-  --titlebar-text: #23211d;
-  --titlebar-text-dim: #55524c;
-  --border-light: #ffffff;
-  --border-dark: #a9a69f;
-  --border-outer: #6f6c66;
-  --text: #22201c;
-  --muted: #6b6862;
-  --link: #1d5aa8;
-  --link-hover: #0f3b76;
-  --accent: #2b6cb0;
-  --accent-contrast: #ffffff;
-  --fx-stars: 0.1;
-  --fx-petal: 0.3;
-  --petal-a: rgba(233, 175, 188, 0.75);
-  --petal-b: rgba(240, 193, 203, 0.75);
+  --control-face: #8a8a8a;
 }
 
 :root[data-theme="dark"] {
@@ -137,6 +112,7 @@
   --link-hover: #45185f;
   --accent: #7a3cb0;
   --accent-contrast: #ffffff;
+  --control-face: var(--surface);
   --fx-stars: 0.4;
   --fx-petal: 0.55;
   --petal-a: rgba(214, 168, 240, 0.9);
@@ -162,6 +138,7 @@
   --link-hover: #0a3260;
   --accent: #1a5f9e;
   --accent-contrast: #ffffff;
+  --control-face: var(--surface);
   --fx-stars: 0.45;
   --fx-petal: 0.45;
   --petal-a: rgba(160, 200, 240, 0.85);
@@ -187,36 +164,37 @@
   --link-hover: #661c12;
   --accent: #a6362a;
   --accent-contrast: #ffffff;
+  --control-face: var(--surface);
   --fx-stars: 0.4;
   --fx-petal: 0.5;
   --petal-a: rgba(232, 152, 152, 0.9);
   --petal-b: rgba(242, 178, 178, 0.9);
 }
 
-:root[data-theme="black"] {
-  --background: #000000;
-  --background-2: #070707;
-  --surface: #0e0e0e;
-  --surface-alt: #171717;
-  --surface-sunken: #050505;
-  --titlebar: #101010;
-  --titlebar-2: #2b2b2b;
-  --titlebar-text: #f0f0f0;
-  --titlebar-text-dim: #a8a8a8;
-  --border-light: #3d3d3d;
-  --border-dark: #000000;
-  --border-outer: #383838;
-  --text: #d8d8d8;
-  --muted: #7d7d7d;
-  --link: #e6e6e6;
-  --link-hover: #ffffff;
-  --accent: #ffffff;
-  --accent-contrast: #000000;
-  --control-face: #8a8a8a;
-  --fx-stars: 0.7;
-  --fx-petal: 0.35;
-  --petal-a: rgba(200, 200, 200, 0.7);
-  --petal-b: rgba(230, 230, 230, 0.7);
+:root[data-theme="green"] {
+  --background: #0a1a10;
+  --background-2: #12291b;
+  --surface: #dcecdf;
+  --surface-alt: #eef6ef;
+  --surface-sunken: #bcd4c0;
+  --titlebar: #14562a;
+  --titlebar-2: #4d9c5e;
+  --titlebar-text: #ffffff;
+  --titlebar-text-dim: #cfe8d5;
+  --border-light: #ffffff;
+  --border-dark: #9ab5a0;
+  --border-outer: #0b2e15;
+  --text: #14241a;
+  --muted: #5a7562;
+  --link: #1d6b33;
+  --link-hover: #10471f;
+  --accent: #22713a;
+  --accent-contrast: #ffffff;
+  --control-face: var(--surface);
+  --fx-stars: 0.4;
+  --fx-petal: 0.5;
+  --petal-a: rgba(168, 226, 180, 0.9);
+  --petal-b: rgba(198, 238, 206, 0.9);
 }
 
 /* Tokens não temáticos */
@@ -1362,7 +1340,8 @@ button { font-family: var(--font-ui); cursor: pointer; }
 
 .sakura {
   position: fixed;
-  z-index: 0;
+  /* acima das janelas (z 1), abaixo do seletor de temas (50) e do lightbox */
+  z-index: 20;
   pointer-events: none;
   background: linear-gradient(120deg, var(--petal-a), var(--petal-b));
   filter: opacity(var(--fx-petal));
