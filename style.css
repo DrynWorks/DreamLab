@@ -737,6 +737,43 @@ button { font-family: var(--font-ui); cursor: pointer; }
   color: inherit;
 }
 
+/* Shoutbox — o widget é desenhado para 275px, então fica centralizado
+   dentro da janela em vez de esticar na coluna inteira */
+.shoutbox-body {
+  display: flex;
+  justify-content: center;
+  background: var(--surface-alt);
+  margin: 3px;
+  padding: 6px;
+  box-shadow: inset 1px 1px 0 var(--border-dark), inset -1px -1px 0 var(--border-light);
+}
+
+.shoutbox-body iframe {
+  display: block;
+  width: 275px;
+  max-width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+/* Livro de visitas — botão levantado, no mesmo estilo do [ ENTER ] da splash */
+/* a.guestbook-btn: precisa vencer o display:block de .win95-enter-button,
+   que é declarado depois neste arquivo */
+a.guestbook-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: center;
+  animation: fadeInUp 0.35s ease-out backwards;
+}
+
+.guestbook-icon {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+}
+
 .menu-option-card .option-body { flex: 1; }
 
 .menu-option-card:hover { text-decoration: none; }
