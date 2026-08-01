@@ -121,17 +121,35 @@
 
       </div><!-- /site-columns -->
 
-      <!-- Shoutbox flutuante — fora do fluxo do conteúdo principal -->
-      <div class="window shoutbox-float" id="shoutbox-window">
-        <div class="win98-titlebar shoutbox-titlebar">
-          <div class="win98-titlebar-text">SMS</div>
-          <button type="button" class="win95-btn shoutbox-toggle" id="shoutbox-toggle"
-            aria-label="Minimizar Shoutbox" aria-expanded="true" aria-controls="shoutbox-body">_</button>
+      <!-- Shoutbox flutuante — fora do fluxo do conteúdo principal.
+           A classe "shoutbox-pda" liga a moldura de terminal/pager;
+           remova-a (deixando só "window shoutbox-float") para voltar
+           ao formato de janela padrão. -->
+      <div class="window shoutbox-float shoutbox-pda" id="shoutbox-window">
+
+        <div class="shoutbox-pda-chrome shoutbox-pda-top" aria-hidden="true">
+          <span class="status-dot"></span>
+          <span class="shoutbox-pda-speaker"></span>
         </div>
-        <div class="shoutbox-body" id="shoutbox-body">
-          <iframe src="https://dryn.ishoutbox.com" title="DreamLab Shoutbox" width="100%" height="450"
-            frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+
+        <div class="shoutbox-pda-screen">
+          <div class="win98-titlebar shoutbox-titlebar">
+            <div class="win98-titlebar-text">SMS</div>
+            <button type="button" class="win95-btn shoutbox-toggle" id="shoutbox-toggle"
+              aria-label="Minimizar Shoutbox" aria-expanded="true" aria-controls="shoutbox-body">_</button>
+          </div>
+          <div class="shoutbox-body" id="shoutbox-body">
+            <iframe src="https://dryn.ishoutbox.com" title="DreamLab Shoutbox" width="100%" height="450"
+              frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
+
+        <div class="shoutbox-pda-chrome shoutbox-pda-buttons" aria-hidden="true">
+          <span class="shoutbox-pda-btn"></span>
+          <span class="shoutbox-pda-btn"></span>
+          <span class="shoutbox-pda-btn"></span>
+        </div>
+
       </div>
 
       <footer class="site-footer">
