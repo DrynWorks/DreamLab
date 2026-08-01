@@ -49,11 +49,23 @@
     }
   }
 
+  /* Mantém o iframe central (pages/*.html) no mesmo tema do shell,
+     sem esperar a próxima navegação dentro dele */
+  function syncContentFrame(id) {
+    try {
+      var frame = window.frames['dreamlab-content'];
+      if (frame && frame.document && frame.document.documentElement) {
+        frame.document.documentElement.setAttribute('data-theme', id);
+      }
+    } catch (e) { /* frame de outra origem ou ainda não carregado */ }
+  }
+
   function apply(id, persist) {
     if (!isValid(id)) id = DEFAULT_THEME;
     document.documentElement.setAttribute('data-theme', id);
     if (persist) save(id);
     markActive(id);
+    syncContentFrame(id);
   }
 
   /* Aplica imediatamente (antes do body existir) */

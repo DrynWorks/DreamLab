@@ -9,10 +9,11 @@
   <title>DreamLab — Home</title>
   <link rel="stylesheet" href="style.css">
   <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body data-page="home">
 
   <div id="loading-bar"></div>
   <div class="desktop-bg"></div>
@@ -71,13 +72,7 @@
             <div class="window-header">
               <span class="window-title">Menu</span>
             </div>
-            <div class="window-body" style="padding: 6px;">
-              <ul class="nav-list">
-                <li><a href="menu.html" class="nav-item active"><span class="nav-icon">&gt;</span> HOME</a></li>
-                <li><a href="artes.html" class="nav-item"><span class="nav-icon">&gt;</span> GALLERY</a></li>
-                <li><a href="links.html" class="nav-item"><span class="nav-icon">&gt;</span> LINKS</a></li>
-              </ul>
-            </div>
+            <div class="window-body" style="padding: 6px;" data-nav></div>
           </div>
 
           <div class="window" style="animation-delay: 0.12s;">
@@ -112,54 +107,32 @@
         <!-- Main -->
         <div class="site-main">
 
-          <div class="page-head" style="animation-delay: 0.04s;">
-            <span class="page-title">HOME</span>
-          </div>
-
-          <div class="menu-options-grid">
-
-            <a href="artes.html" class="window menu-option-card" style="animation-delay: 0.1s;">
-              <div class="window-header">
-                <span class="window-title">Gallery</span>
-                <span class="arrow-indicator">&rarr;</span>
-              </div>
-              <div class="option-body">
-                <span class="option-icon icon-gallery"></span>
-                <span class="option-title">GALLERY</span>
-              </div>
-            </a>
-
-            <a href="links.html" class="window menu-option-card" style="animation-delay: 0.14s;">
-              <div class="window-header">
-                <span class="window-title">Links</span>
-                <span class="arrow-indicator">&rarr;</span>
-              </div>
-              <div class="option-body">
-                <span class="option-icon icon-links"></span>
-                <span class="option-title">LINKS</span>
-              </div>
-            </a>
-
-          </div>
-
-          <div class="window shoutbox-window" style="animation-delay: 0.18s;">
+          <div class="window content-frame" style="animation-delay: 0.06s;">
             <div class="window-header">
-              <span class="window-title">Shoutbox</span>
+              <span class="window-title">Viewer</span>
             </div>
-            <div class="shoutbox-body">
-              <iframe src="https://dryn.ishoutbox.com" title="Shoutbox" frameborder="0"
-                allowtransparency="true"></iframe>
+            <div class="content-frame-body">
+              <iframe name="dreamlab-content" src="pages/home.html" title="Conteúdo do DreamLab"
+                class="content-iframe"></iframe>
             </div>
           </div>
-
-          <a href="https://dryn.atabook.org" target="_blank" rel="noopener"
-            class="win95-enter-button guestbook-btn" style="animation-delay: 0.22s;">
-            <span class="guestbook-icon">&#9998;</span> LIVRO DE VISITAS
-          </a>
 
         </div><!-- /site-main -->
 
       </div><!-- /site-columns -->
+
+      <!-- Shoutbox flutuante — fora do fluxo do conteúdo principal -->
+      <div class="window shoutbox-float" id="shoutbox-window">
+        <div class="win98-titlebar shoutbox-titlebar">
+          <div class="win98-titlebar-text">SMS</div>
+          <button type="button" class="win95-btn shoutbox-toggle" id="shoutbox-toggle"
+            aria-label="Minimizar Shoutbox" aria-expanded="true" aria-controls="shoutbox-body">_</button>
+        </div>
+        <div class="shoutbox-body" id="shoutbox-body">
+          <iframe src="https://dryn.ishoutbox.com" title="DreamLab Shoutbox" width="100%" height="450"
+            frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </div>
 
       <footer class="site-footer">
         <div class="footer-text">@ DrynWorks</div>
@@ -170,6 +143,7 @@
   </div><!-- /outer-window -->
 
   <script src="js/sakura.js"></script>
+  <script src="js/shoutbox.js"></script>
 
 </body>
 
