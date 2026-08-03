@@ -19,6 +19,7 @@
    14 · Splash (index)
    15 · Responsivo
    16 · Sakura
+   17 · 404 (not_found)
    ============================================================ */
 
 /* ===== 01 · FONTES ===== */
@@ -623,6 +624,29 @@ button { font-family: var(--font-ui); cursor: pointer; }
 
 .theme-bar .theme-swatch { padding: 3px; gap: 0; }
 .theme-bar .theme-swatch .label { display: none; }
+
+/* Site info (contador / última atualização) */
+.site-info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.site-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.site-info-value {
+  color: var(--text);
+}
 
 /* CD player */
 #music-player {
@@ -1619,3 +1643,37 @@ button { font-family: var(--font-ui); cursor: pointer; }
   background: linear-gradient(120deg, var(--petal-a), var(--petal-b));
   filter: opacity(var(--fx-petal));
 }
+
+/* ===== 17 · 404 (not_found) ===== */
+.splash-container.notfound-container {
+  max-width: 420px;
+}
+
+.notfound-window { width: 100%; }
+
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 26px 18px;
+  text-align: center;
+}
+
+.notfound-code {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.notfound-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  color: var(--muted);
+  max-width: 320px;
+}
+
+.notfound-actions { margin-top: 4px; }
