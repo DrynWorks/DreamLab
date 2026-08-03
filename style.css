@@ -625,29 +625,6 @@ button { font-family: var(--font-ui); cursor: pointer; }
 .theme-bar .theme-swatch { padding: 3px; gap: 0; }
 .theme-bar .theme-swatch .label { display: none; }
 
-/* Site info (contador / última atualização) */
-.site-info-body {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-family: var(--font-ui);
-  font-size: 9px;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-  color: var(--muted);
-}
-
-.site-info-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-}
-
-.site-info-value {
-  color: var(--text);
-}
-
 /* CD player */
 #music-player {
   background: var(--surface);

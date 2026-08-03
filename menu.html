@@ -84,16 +84,6 @@
             </div>
           </div>
 
-          <div class="window" style="animation-delay: 0.14s;">
-            <div class="window-header">
-              <span class="window-title">Site Info</span>
-            </div>
-            <div class="window-body site-info-body">
-              <div class="site-info-row">UPDATED: <span id="lastupdate" class="site-info-value"></span></div>
-              <div class="site-info-row">VISITORS: <span id="hitcount" class="site-info-value"></span></div>
-            </div>
-          </div>
-
           <div class="window music-player" id="music-player" style="animation-delay: 0.16s;">
             <div class="win98-titlebar">
               <div class="win98-titlebar-text">
@@ -172,39 +162,6 @@
 
   <script src="js/sakura.js?v=1"></script>
   <script src="js/shoutbox.js?v=1"></script>
-
-  <script>
-    (function () {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          var site_data = JSON.parse(this.responseText);
-
-          var num_arr = site_data.info.views.toString().split("");
-          var num_str = "";
-          for (var i = 0; i < num_arr.length; i++) {
-            num_str += num_arr[i];
-            if ((num_arr.length - 1 - i) % 3 == 0 && (num_arr.length - 1 - i) != 0) {
-              num_str += ",";
-            }
-          }
-          document.getElementById("hitcount").innerHTML = num_str;
-
-          var date_obj = new Date(site_data.info.last_updated);
-          var dd = String(date_obj.getDate()).padStart(2, "0");
-          var mm = String(date_obj.getMonth() + 1).padStart(2, "0");
-          document.getElementById("lastupdate").innerHTML = dd + "/" + mm + "/" + date_obj.getFullYear();
-        }
-      };
-
-      xhttp.open(
-        "GET",
-        "https://weirdscifi.ratiosemper.com/neocities.php?sitename=dryn",
-        true
-      );
-      xhttp.send();
-    })();
-  </script>
 
 </body>
 
